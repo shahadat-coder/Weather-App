@@ -330,7 +330,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       return GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (
+                              context) =>
+                              DetailPage(
+                                  consolidatedWeatherList: consolidatedWeatherList,
+                                  selectedId: index,
+                                  location: location)));
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 20),
@@ -369,7 +374,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                               Image.asset(
-                                'assets/' + weatherUrl + '.png',
+                                '${'assets/' + weatherUrl}.png',
                                 width: 30,
                               ),
                               Text(

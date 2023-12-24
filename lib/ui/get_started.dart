@@ -27,7 +27,7 @@ class _GetStartedState extends State<GetStarted> {
            const SizedBox(height: 30,),
            GestureDetector(
              onTap: (){
-               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const WelcomePage()));
+               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const Welcome()));
              },
              child: Container(
                height: 50,
