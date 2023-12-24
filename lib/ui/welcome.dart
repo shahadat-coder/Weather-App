@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/models/city.dart';
+import 'package:weather_app/ui/home.dart';
 
 import '../models/constants.dart';
 
@@ -70,11 +71,12 @@ class _WelcomePageState extends State<WelcomePage> {
             }
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: myConstants.secondaryColor,
         child: const Icon(Icons.pin_drop),
         onPressed: (){
-          print(selectedCities.length);
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
         },
       ),
     );
